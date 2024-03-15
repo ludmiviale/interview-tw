@@ -1,0 +1,107 @@
+.subContainerFixedBig {
+  min-height: 85%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  padding: 30px 40px 10px 40px;
+  width: 96%;
+  border-radius: 10px;
+  max-height: 75vh;
+  overflow: auto;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 15px;
+  background-color: white;
+  z-index: 2;
+}
+
+.MainDiv {
+  background-color: #ebeff2;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  animation: showDiv ease-in-out 0.3s forwards;
+}
+
+@keyframes showDiv {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pagePDF {
+  justify-content: center;
+  width: 450px;
+  height: 630px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-size: 9px;
+  padding: 30px;
+}
+
+.headerPDF {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.titleContract {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.inputContract {
+  width: 100%;
+  max-height: 10px;
+  padding: 8px;
+  border: none;
+  text-align: center;
+  border-bottom: 1px solid black;
+  background-color: rgb(250, 250, 255);
+}
+
+.inputContract:focus {
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+.rowContract {
+  display: flex;
+  white-space: nowrap;
+}
+.pContract {
+  margin: 0px 2px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.textAreaContract {
+  margin: 0px 2px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  border: none;
+  background-color: rgb(250, 250, 255);
+}
+
+.PageTitle {
+  color: #002752;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: 0.01em;
+  animation: showDiv ease-in-out 0.3s forwards;
+  position: fixed;
+  left: 50px;
+}
