@@ -1,5 +1,7 @@
 # Entrevista Técnica Trueway Realty
 
+Entrevista de trabajo creada por Denis Peralta para el puesto de Desarrollador/a Front End para la compania.
+
 ## Objetivos 
 
 - Crear un documento PDF exactamente igual a la imagen "EjemploContrato.jpeg" que se encuentra en la raiz del repositorio.
@@ -13,9 +15,11 @@
 
 ## Dependencias a utilizar: 
 
-  "html-to-image": "^1.11.11"
-  "jspdf": "^2.5.1"
-  "react": "^18.2.0"
-  "react-bootstrap": "^2.8.0"
-  "react-dom": "^18.2.0"
-  "react-select": "^5.8.0"
+  - "html-to-image": "^1.11.11"
+  - "jspdf": "^2.5.1"
+  - "react": "^18.2.0"
+  - "react-bootstrap": "^2.8.0"
+  - "react-dom": "^18.2.0"
+  - "react-select": "^5.8.0"
+
+## Dependencias a utilizar: 
