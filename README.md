@@ -13,7 +13,7 @@ Entrevista de trabajo creada por Denis Peralta para el puesto de Desarrollador/a
 ### Objetivos secundarios
 
 - Dar un estilo similar a nuestra visor PDF que sea similar al que se encuentra en Chrome al abrir un archivo de PDF. Como por ejemplo el fondo negro, iconos correspondientes para cada boton (imprimir, descargar) y un index para saber en que página del PDF esta nuestra vista actualmente.
-- Agregar una progress bar que nos indique como va avanzando el usuario al completar las secciones de preguntas. (Hay una de bootstrap muy buena)
+- Agregar una progress bar que nos indique como va avanzando el usuario al completar las secciones de preguntas. https://react-bootstrap.netlify.app/docs/components/progress
 
 ## Dependencias a utilizar: 
 
