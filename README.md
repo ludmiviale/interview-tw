@@ -2,9 +2,14 @@
 
 Entrevista de trabajo creada por Denis Peralta para el puesto de Desarrollador/a Front End para la compania.
 
+## Contexto 
+
+Actualmente existe una pantalla para crear/editar e imprimir contratos, se requiere extender la funcionalidad de esta 
+para crear un nuevo contrato mas commplejo. 
+
 ## Objetivos 
 
-- Crear una vista que muestre preview de PDF exactamente igual a la imagen "EjemploContratoAsIs.jpeg" que se encuentra en la raiz del repositorio. La funcionalidad ya esta incluida, se deberá trabajar fuertemente en el aspecto visual.
+- Crear un nuevo componente similar a AddendumToContract que debera generar un PDF similar  "EjemploContratoAsIs.jpeg" que se encuentra en la raiz del repositorio. 
 - El mismo debe ser editable y además se deberán incluir preguntas que se relacionen directamente con los campos del PDF. Por ejemplo en los dos primeros inputs podriamos hacer preguntas como: ¿Quíen es el comprador? y ¿Quíen es el vendedor?
 - Se deberan crear nuevos componentes como por ejemplo un Input Checkbox para la sección "Purchase Price" del contrato.
 - Incluir traducciones en español e ingles para cada pregunta.
