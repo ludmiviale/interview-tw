@@ -4,7 +4,7 @@ Entrevista de trabajo creada por Denis Peralta para el puesto de Desarrollador/a
 
 ## Objetivos 
 
-- Crear una vista que muestre preview de PDF exactamente igual a la imagen "EjemploContrato.jpeg" que se encuentra en la raiz del repositorio. La funcionalidad ya esta incluida, se deberá trabajar fuertemente en el aspecto visual.
+- Crear una vista que muestre preview de PDF exactamente igual a la imagen "EjemploContratoAsIs.jpeg" que se encuentra en la raiz del repositorio. La funcionalidad ya esta incluida, se deberá trabajar fuertemente en el aspecto visual.
 - El mismo debe ser editable y además se deberán incluir preguntas que se relacionen directamente con los campos del PDF. Por ejemplo en los dos primeros inputs podriamos hacer preguntas como: ¿Quíen es el comprador? y ¿Quíen es el vendedor?
 - Se deberan crear nuevos componentes como por ejemplo un Input Checkbox para la sección "Purchase Price" del contrato.
 - Incluir traducciones en español e ingles para cada pregunta.
