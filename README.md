@@ -23,5 +23,3 @@ Entrevista de trabajo creada por Denis Peralta para el puesto de Desarrollador/a
   - "react-dom": "^18.2.0"
   - "react-select": "^5.8.0"
   - "i18next": "^22.5.1"
-
-## Dependencias a utilizar: 
