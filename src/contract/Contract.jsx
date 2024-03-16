@@ -13,8 +13,6 @@ export const Contract = () => {
     console.log("Esta es la funcion para agregar contratos");
   return (
     <>
-      <PageTitle title="Contracts" />
-
       <div className="MainDiv">
         <div className="subContainerFixedBig">
           <div style={{ display: "flex" }}>

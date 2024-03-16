@@ -66,6 +66,7 @@ export const AddendumToContract = ({
     >
       {form.completed === true ? (
         <>
+          {/* // Esta seccion se podria componetizar */}
           <div
             style={{
               display: "flex",
@@ -75,6 +76,7 @@ export const AddendumToContract = ({
             }}
           >
             {form.completed === true ? (
+              // Este boton no funciona correctamente, fixear
               <BtnStandart
                 type="primary"
                 action={() => setForm({ ...form, completed: false })}
@@ -101,7 +103,6 @@ export const AddendumToContract = ({
               children={<>Imprimir</>}
             />
           </div>
-
           <PdfAddendumToContract
             handleInputForm={handleInputForm}
             form={form}
