@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { BlankForm } from "./BlankForm";
-import { PageTitle } from "../components/PageTitle";
 import InputSelect from "../components/InputSelect";
 
 const optContracts = [
@@ -9,8 +8,9 @@ const optContracts = [
 export const Contract = () => {
   const [form, setForm] = useState({});
   const flyerRef = useRef();
-  const AddContract = () =>
+  const AddContract = () => {
     console.log("Esta es la funcion para agregar contratos");
+  };
   return (
     <>
       <div className="MainDiv">

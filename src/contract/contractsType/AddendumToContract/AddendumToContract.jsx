@@ -66,7 +66,7 @@ export const AddendumToContract = ({
     >
       {form.completed === true ? (
         <>
-          {/* // Esta seccion se podria componetizar */}
+          {/* // OPTIONAL Esta seccion se podria componetizar */}
           <div
             style={{
               display: "flex",
@@ -76,7 +76,7 @@ export const AddendumToContract = ({
             }}
           >
             {form.completed === true ? (
-              // Este boton no funciona correctamente, fixear
+              // OPTIONAL Este boton no funciona correctamente, fixear
               <BtnStandart
                 type="primary"
                 action={() => setForm({ ...form, completed: false })}
