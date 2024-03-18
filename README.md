@@ -5,7 +5,7 @@ Entrevista de trabajo creada por Denis Peralta para el puesto de Desarrollador/a
 ## Contexto 
 
 Actualmente existe una pantalla para crear/editar e imprimir contratos, se requiere extender la funcionalidad de esta 
-para crear un nuevo contrato mas commplejo. 
+para crear un nuevo contrato mas complejo. 
 
 ## Objetivos 
 
