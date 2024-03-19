@@ -1,5 +1,6 @@
 import React from "react";
 import { AddendumToContract } from "./contractsType/AddendumToContract/AddendumToContract";
+import { AsIs } from "./contractsType/AsIs/AsIs";
 
 export const BlankForm = ({ form, setForm, flyerRef, AddContract }) => {
   const handleInputForm = ({ inputValue, attribute, section, completed }) => {
@@ -27,6 +28,14 @@ export const BlankForm = ({ form, setForm, flyerRef, AddContract }) => {
     <>
       {form.key === "Addendum To Contract" && (
         <AddendumToContract
+          handleInputForm={handleInputForm}
+          form={form}
+          flyerRef={flyerRef}
+          AddContract={AddContract}
+        />
+      )}
+      {form.key === "AS IS" && (
+        <AsIs
           handleInputForm={handleInputForm}
           form={form}
           flyerRef={flyerRef}
