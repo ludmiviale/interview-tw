@@ -4,6 +4,7 @@ import InputSelect from "../components/InputSelect";
 
 const optContracts = [
   { value: "Addendum To Contract", label: "Addendum To Contract" },
+  { value: "AS IS", label: "AS IS" },
 ];
 export const Contract = () => {
   const [form, setForm] = useState({});
