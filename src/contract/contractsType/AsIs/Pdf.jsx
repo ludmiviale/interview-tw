@@ -5,6 +5,7 @@ import {
   PdfPage,
   PdfRow,
   PdfInput,
+  PdfFooter,
 } from "../../contractComponents/PdfComponents";
 
 export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
@@ -21,14 +22,14 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
           </p>
         </PdfHeader>
         <PdfRow>
-          PARTIES:
+          <span style={{ fontWeight: "bold" }}>PARTIES:</span>
           <PdfInput
             form={form}
             handleInputForm={handleInputForm}
             attribute="Seller"
             paragraph={form.completed}
           />{" "}
-          ("Seller")
+          ("Seller"),
         </PdfRow>
         <PdfRow>
           and
@@ -38,7 +39,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             attribute="Buyer"
             paragraph={form.completed}
           />{" "}
-          ("Buyer")
+          ("Buyer"),
         </PdfRow>
         <PdfRow>
           agree that Seller shall sell and Buyer shall buy the following
@@ -123,10 +124,10 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
           security gate and other access devices, mailbox keys, and storm
-          shutters/storm protection items
+          shutters/storm protection items and
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          and hardware ("Personal Property").
+          hardware ("Personal Property").
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
           Other Personal Property items included in this purchase are:
@@ -151,6 +152,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
+
         <PdfRow styles={{ fontWeight: "bold", paddingLeft: "150px" }}>
           PURCHASE PRICE AND CLOSING
         </PdfRow>
@@ -158,8 +160,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
         <PdfRow styles={{ fontWeight: "bold" }}>
           2. PURCHASE PRICE{" "}
           <span style={{ fontWeight: "normal" }}>(U.S. currency):</span>
-          .......................................................................
-          $
+          .................................................................... $
           <PdfInput
             form={form}
             handleInputForm={handleInputForm}
@@ -173,7 +174,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             {" "}
             (checks subject to Collection)
           </span>
-          ... $
+          $
           <PdfInput
             form={form}
             handleInputForm={handleInputForm}
@@ -185,6 +186,189 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
           The initial deposit made payable and delivered to "Escrow Agent" named
           below
         </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          <span style={{ fontWeight: "bold" }}>(CHECK ONE):</span>
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="DepositChoice(i)"
+            paragraph={form.completed}
+            type={"checkbox"}
+          />
+          (i) accompanies offer or
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="DepositChoice(ii)"
+            paragraph={form.completed}
+            type={"checkbox"}
+          />
+          (ii) is to be made within
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="DaysChoice(ii)"
+            paragraph={form.completed}
+          />{" "}
+          (if left black, then 3) days
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          after Effective Date. IF NEITHER BOX IS CHECKED, THEN OPTION (ii)
+          SHALL BE DEEMED SELECTED.
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          Escrow Agent Name:
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="EscrowAgentName"
+            paragraph={form.completed}
+          />
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          Address:
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="EscrowAgentAddress"
+            paragraph={form.completed}
+          />
+          Phone:
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="EscrowAgentPhone"
+            paragraph={form.completed}
+          />
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          E-mail:
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="EscrowAgentEmail"
+            paragraph={form.completed}
+          />
+          Fax:
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="EscrowAgentFax"
+            paragraph={form.completed}
+          />
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "10px" }}>
+          (b) Additional deposit to be delivered to Escrow Agent within
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="AdditionalDepositTime"
+            paragraph={form.completed}
+          />
+          (if left black, tehn 10)
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          days after Effective
+          Date.........................................................................................$
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="AdditionalDepositAmount"
+            paragraph={form.completed}
+          />
+        </PdfRow>
+        <PdfFooter />
+      </PdfPage>
+
+      <PdfPage>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          (All deposits paid or agreed to be paid, are collectively referred to
+          as thw "Deposit")
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "10px" }}>
+          (c) Financing: Express as a dollar amount or percentage ("Loan
+          Amount") see Paragraoh 8 $
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="FinancingPercentage"
+            paragraph={form.completed}
+          />
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "10px" }}>
+          (d) Other:
+          ..........................................................................................................................
+          $
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="Other"
+            paragraph={form.completed}
+          />
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "10px" }}>
+          (e) Balance to close (not including Buyers's closing costs, prepaids
+          and prorations) by wire
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          transfer or other Collected funds (see STANDARD S)
+          ................................................... $
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="BalanceToClose"
+            paragraph={form.completed}
+          />
+        </PdfRow>
+        <PdfRow styles={{ fontWeight: "bold" }}>
+          3. TIME FOR ACCEPTANCE OF OFFER AND COUNTER-OFFERS; EFFECTIVE DATE:{" "}
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "10px" }}>
+          (a) If not signed by Buyer and Seller, and an executed copy delivered
+          to all parties on or before
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          <PdfInput
+            form={form}
+            handleInputForm={handleInputForm}
+            attribute="EffectiveDate"
+            paragraph={form.completed}
+          />
+          , this offer shall be deemed withdrawn and the Deposit, if any, shall
+          be
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          returned to Buyer. Unless otherwise stated, time for acceptance of any
+          counter-offers shall be within
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          2 days after the day the counter-offer is delivered.
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "10px" }}>
+          (b) The effective date of this Contract shall be the date when the
+          last one of the Buyer and Seller has
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          signed or initialed and delivered this offer or final counter-offer
+          ("Effective Date").{" "}
+        </PdfRow>
+        <PdfRow styles={{ fontWeight: "bold" }}>
+          4. CLOSING; CLOSING DATE:
+          <span style={{ fontWeight: "normal" }}>
+            The closing of this transaction shall occur when all funds required
+            for closing
+          </span>
+        </PdfRow>
+        <PdfRow>
+          are received by Closing Agent and Collected pursuant to STANDARD S and
+          all closing documents required
+        </PdfRow>
+        <PdfRow>
+          to be furnished by each party pursuant to this Contract are delivered
+          ("Closing"). Unless modified by other
+        </PdfRow>
+        <PdfRow>provisions of</PdfRow>
+        <PdfFooter />
       </PdfPage>
     </PdfDocument>
   );
