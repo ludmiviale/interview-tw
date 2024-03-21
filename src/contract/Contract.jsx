@@ -18,7 +18,7 @@ export const Contract = () => {
         <div className="subContainerFixedBig">
           <div style={{ display: "flex" }}>
             <div style={{ minWidth: "20%" }}>
-              <p>Select your contract</p>
+              <p style={{ color: "white" }}>Select your contract</p>
               <InputSelect
                 opt={optContracts}
                 action={(e) => {
