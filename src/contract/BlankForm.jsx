@@ -30,6 +30,7 @@ export const BlankForm = ({ form, setForm, flyerRef, AddContract }) => {
         <AddendumToContract
           handleInputForm={handleInputForm}
           form={form}
+          setForm={setForm}
           flyerRef={flyerRef}
           AddContract={AddContract}
         />
@@ -38,6 +39,7 @@ export const BlankForm = ({ form, setForm, flyerRef, AddContract }) => {
         <AsIs
           handleInputForm={handleInputForm}
           form={form}
+          setForm={setForm}
           flyerRef={flyerRef}
           AddContract={AddContract}
         />
