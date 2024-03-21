@@ -5,6 +5,7 @@ import {
   PdfPage,
   PdfRow,
   PdfInput,
+  PdfCheckbox,
   PdfFooter,
 } from "../../contractComponents/PdfComponents";
 
@@ -159,8 +160,11 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
 
         <PdfRow styles={{ fontWeight: "bold" }}>
           2. PURCHASE PRICE{" "}
-          <span style={{ fontWeight: "normal" }}>(U.S. currency):</span>
-          .................................................................... $
+          <span style={{ fontWeight: "normal" }}>
+            (U.S. currency):
+            .............................................................................
+            $
+          </span>
           <PdfInput
             form={form}
             handleInputForm={handleInputForm}
@@ -188,20 +192,18 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
           <span style={{ fontWeight: "bold" }}>(CHECK ONE):</span>
-          <PdfInput
+          <PdfCheckbox
             form={form}
             handleInputForm={handleInputForm}
             attribute="DepositChoice(i)"
             paragraph={form.completed}
-            type={"checkbox"}
           />
           (i) accompanies offer or
-          <PdfInput
+          <PdfCheckbox
             form={form}
             handleInputForm={handleInputForm}
             attribute="DepositChoice(ii)"
             paragraph={form.completed}
-            type={"checkbox"}
           />
           (ii) is to be made within
           <PdfInput
@@ -277,7 +279,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
-        <PdfFooter />
+        <PdfFooter pageNumber={1} />
       </PdfPage>
 
       <PdfPage>
@@ -287,7 +289,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "10px" }}>
           (c) Financing: Express as a dollar amount or percentage ("Loan
-          Amount") see Paragraoh 8 $
+          Amount") see Paragraoh 8...
           <PdfInput
             form={form}
             handleInputForm={handleInputForm}
@@ -368,7 +370,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
           ("Closing"). Unless modified by other
         </PdfRow>
         <PdfRow>provisions of</PdfRow>
-        <PdfFooter />
+        <PdfFooter pageNumber={2} />
       </PdfPage>
     </PdfDocument>
   );
