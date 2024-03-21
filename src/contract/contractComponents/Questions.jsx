@@ -1,4 +1,5 @@
 import React from "react";
+import BtnStandart from "../../components/BtnStandart";
 
 export const Questions = ({
   information,
@@ -86,42 +87,34 @@ export const Questions = ({
             </div>
           );
       })}
-      <div style={{ textAlign: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "5%",
+        }}
+      >
         {form.section > 1 && (
-          <button
-            style={{
-              margin: "10px",
-              padding: "5px 10px",
-              borderRadius: "5px",
-              border: "none",
-            }}
-            onClick={() => handleInputForm({ section: form.section - 1 })}
-          >
-            Preview
-          </button>
+          <BtnStandart
+            type="primary"
+            action={() => handleInputForm({ section: form.section - 1 })}
+            children={<i className="bi bi-arrow-left-circle-fill"></i>}
+            marginRight="10px"
+          />
         )}
-        <button
-          style={{
-            margin: "10px",
-            padding: "5px 10px",
-            borderRadius: "5px",
-            border: "none",
-          }}
-          onClick={() => handleInputForm({ section: form.section + 1 })}
-        >
-          Next
-        </button>
-        <button
-          style={{
-            margin: "10px",
-            padding: "5px 10px",
-            borderRadius: "5px",
-            border: "none",
-          }}
-          onClick={() => AddContract({ isDraft: true })}
-        >
-          Save Draft
-        </button>
+        <BtnStandart
+          type="primary"
+          action={() => AddContract({ isDraft: true })}
+          children={<i className="bi bi-check2-circle"></i>}
+          marginRight="10px"
+        />
+        <BtnStandart
+          type="primary"
+          action={() => handleInputForm({ section: form.section + 1 })}
+          children={<i className="bi bi-arrow-right-circle-fill"></i>}
+          marginRight="10px"
+        />
       </div>
     </div>
   );
