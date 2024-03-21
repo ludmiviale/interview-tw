@@ -5,6 +5,7 @@ import { PdfAddendumToContract } from "./Pdf";
 import jsPDF from "jspdf";
 import { Sections } from "../../contractComponents/Sections";
 import BtnStandart from "../../../components/BtnStandart";
+import DocumentActions from "../../../components/DocumentActions";
 
 export const AddendumToContract = ({
   handleInputForm,
@@ -67,48 +68,21 @@ export const AddendumToContract = ({
     >
       {form.completed === true ? (
         <>
-          {/* // OPTIONAL Esta seccion se podria componetizar */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "5%",
-            }}
-          >
-            {form.completed === true ? (
-              // OPTIONAL Este boton no funciona correctamente -> ARREGLADO
-              <BtnStandart
-                type="primary"
-                action={() => setForm({ ...form, completed: false })}
-                children={<i className="bi bi-pencil-fill"></i>}
-                marginRight="10px"
-              />
-            ) : (
-              <BtnStandart
-                type="primary"
-                action={() => setForm({ ...form, completed: true })}
-                children={<>Back</>}
-                marginRight="10px"
-              />
-            )}
-            <BtnStandart
-              type="primary"
-              action={handleGeneratePdf}
-              marginRight="10px"
-              children={<i className="bi bi-file-arrow-down-fill"></i>}
+          <div>
+            <DocumentActions
+              form={form}
+              setForm={setForm}
+              flyerRef={flyerRef}
+              handleInputForm={handleInputForm}
+              handleGeneratePdf={handleGeneratePdf}
+              handlePrintPdf={handlePrintPdf}
             />
-            <BtnStandart
-              type="primary"
-              action={handlePrintPdf}
-              children={<i className="bi bi-printer-fill"></i>}
+            <PdfAddendumToContract
+              handleInputForm={handleInputForm}
+              form={form}
+              flyerRef={flyerRef}
             />
           </div>
-          <PdfAddendumToContract
-            handleInputForm={handleInputForm}
-            form={form}
-            flyerRef={flyerRef}
-          />
         </>
       ) : (
         <>
