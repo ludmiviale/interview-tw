@@ -8,8 +8,10 @@ export const Sections = ({ information, handleInputForm, form }) => {
           <div key={`${sec.key}header`}>
             <button
               style={{
-                marginRight: "5px",
-                padding: "0px 5px",
+                margin: "10px",
+                padding: "5px 10px",
+                borderRadius: "5px",
+                border: "none",
                 backgroundColor: form?.section === sec?.position && "lightblue",
                 pointerEvents: form?.section === sec?.position && "none",
               }}
