@@ -9,6 +9,7 @@ import BtnStandart from "../../../components/BtnStandart";
 export const AddendumToContract = ({
   handleInputForm,
   form,
+  setForm,
   flyerRef,
   AddContract,
 }) => {
@@ -76,11 +77,11 @@ export const AddendumToContract = ({
             }}
           >
             {form.completed === true ? (
-              // OPTIONAL Este boton no funciona correctamente, fixear
+              // OPTIONAL Este boton no funciona correctamente -> ARREGLADO
               <BtnStandart
                 type="primary"
                 action={() => setForm({ ...form, completed: false })}
-                children={<>Edit</>}
+                children={<i className="bi bi-pencil-fill"></i>}
                 marginRight="10px"
               />
             ) : (
@@ -95,12 +96,12 @@ export const AddendumToContract = ({
               type="primary"
               action={handleGeneratePdf}
               marginRight="10px"
-              children={<>Descargar</>}
+              children={<i className="bi bi-file-arrow-down-fill"></i>}
             />
             <BtnStandart
               type="primary"
               action={handlePrintPdf}
-              children={<>Imprimir</>}
+              children={<i className="bi bi-printer-fill"></i>}
             />
           </div>
           <PdfAddendumToContract
@@ -125,14 +126,15 @@ export const AddendumToContract = ({
             />
           ) : (
             <>
-              <button
-                onClick={() => {
+              <BtnStandart
+                type="primary"
+                action={() => {
                   handleInputForm({ completed: true });
                   AddContract();
                 }}
-              >
-                Save Contract
-              </button>
+                children={<i className="bi bi-floppy-fill"></i>}
+                marginRight="10px"
+              />
               <PdfAddendumToContract
                 handleInputForm={handleInputForm}
                 form={form}
