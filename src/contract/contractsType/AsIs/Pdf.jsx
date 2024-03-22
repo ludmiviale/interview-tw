@@ -5,7 +5,7 @@ import {
   PdfPage,
   PdfRow,
   PdfInput,
-  PdfCheckbox,
+  PdfRadio,
   PdfFooter,
 } from "../../contractComponents/PdfComponents";
 
@@ -48,9 +48,9 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
         </PdfRow>
         <PdfRow>
           (collectively "Property") pursuant to the terms and conditions of this
-          AS IS Residential Contract For Sale
+          AS IS Residential Contract For Sale And Purchase
         </PdfRow>
-        <PdfRow>And Purchase and any riders and addenda ("Contract"):</PdfRow>
+        <PdfRow> and any riders and addenda ("Contract"):</PdfRow>
 
         <PdfRow styles={{ fontWeight: "bold" }}>
           1. PROPERTY DESCRIPTION:
@@ -92,44 +92,43 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
+
         <PdfRow styles={{ paddingLeft: "23px" }}>
           together with all existing improvements and fixtures, including
-          built-in appliances, built-in furnishings
+          built-in appliances, built-in furnishings and
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          and attached wall-to-wall carpeting and flooring ("Real Porperty")
-          unless specifically excluded in
+          attached wall-to-wall carpeting and flooring ("Real Porperty") unless
+          specifically excluded in Paragraph 1(e) or
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          Paragraph 1(e) or by other terms of this Contract.
+          by other terms of this Contract.
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "10px" }}>
           (d) Personal Property: Unless excluded in Paragraph 1(e) or by other
-          terms of this Contract, the following
+          terms of this Contract, the following items
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          items which ar owned by Seller and existing on the Property as of the
-          date of the initial offer are
+          which ar owned by Seller and existing on the Property as of the date
+          of the initial offer are included in the
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          included in the purchase: range(s)/oven(s), regrigerator(s),
-          dishwasher(s), disposal, ceiling fan(s),
+          purchase: range(s)/oven(s), regrigerator(s), dishwasher(s), disposal,
+          ceiling fan(s), light fixture(s), drapery rods
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          light fixture(s), drapery rods and draperies, blinds, window
-          treatments, smoke detector(s), garage
+          and draperies, blinds, window treatments, smoke detector(s), garage
+          door opener(s), thermostat(s),
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          door opener(s), thermostat(s), doorbell(s), television wall mount(s)
-          and television mounting hardware,
+          doorbell(s), television wall mount(s) and television mounting
+          hardware, security gate and other access
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          security gate and other access devices, mailbox keys, and storm
-          shutters/storm protection items and
-        </PdfRow>
-        <PdfRow styles={{ paddingLeft: "23px" }}>
+          devices, mailbox keys, and storm shutters/storm protection items and
           hardware ("Personal Property").
         </PdfRow>
+
         <PdfRow styles={{ paddingLeft: "23px" }}>
           Other Personal Property items included in this purchase are:
           <PdfInput
@@ -141,9 +140,8 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
           Personal Property is included in the Purchase Price, has no
-          contributory value, and shall be left for{" "}
+          contributory value, and shall be left for the Buyer.
         </PdfRow>
-        <PdfRow styles={{ paddingLeft: "23px" }}>the Buyer.</PdfRow>
         <PdfRow styles={{ paddingLeft: "10px" }}>
           (e) The following items are excluded from the purchase:
           <PdfInput
@@ -154,7 +152,13 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
           />
         </PdfRow>
 
-        <PdfRow styles={{ fontWeight: "bold", paddingLeft: "150px" }}>
+        <PdfRow
+          styles={{
+            fontWeight: "bold",
+            paddingLeft: "150px",
+            lineHeight: "2",
+          }}
+        >
           PURCHASE PRICE AND CLOSING
         </PdfRow>
 
@@ -162,7 +166,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
           2. PURCHASE PRICE{" "}
           <span style={{ fontWeight: "normal" }}>
             (U.S. currency):
-            .............................................................................
+            .............................................................................................
             $
           </span>
           <PdfInput
@@ -176,7 +180,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
           (a) Initial deposit to be held in escrow in the amount of
           <span style={{ fontWeight: "bold" }}>
             {" "}
-            (checks subject to Collection)
+            (checks subject to Collection) .............
           </span>
           $
           <PdfInput
@@ -190,16 +194,16 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
           The initial deposit made payable and delivered to "Escrow Agent" named
           below
         </PdfRow>
-        <PdfRow styles={{ paddingLeft: "23px" }}>
+        <PdfRow styles={{ paddingLeft: "23px", paddingRight: "100px" }}>
           <span style={{ fontWeight: "bold" }}>(CHECK ONE):</span>
-          <PdfCheckbox
+          <PdfRadio
             form={form}
             handleInputForm={handleInputForm}
             attribute="DepositChoice(i)"
             paragraph={form.completed}
           />
           (i) accompanies offer or
-          <PdfCheckbox
+          <PdfRadio
             form={form}
             handleInputForm={handleInputForm}
             attribute="DepositChoice(ii)"
@@ -211,14 +215,17 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="DaysChoice(ii)"
             paragraph={form.completed}
-          />{" "}
-          (if left black, then 3) days
+          />
+          {"("}if left
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          after Effective Date. IF NEITHER BOX IS CHECKED, THEN OPTION (ii)
-          SHALL BE DEEMED SELECTED.
+          black, then 3{")"} days after Effective Date. IF NEITHER BOX IS
+          CHECKED, THEN
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
+          OPTION (ii) SHALL BE DEEMED SELECTED.
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px", paddingRight: "80px" }}>
           Escrow Agent Name:
           <PdfInput
             form={form}
@@ -227,7 +234,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
-        <PdfRow styles={{ paddingLeft: "23px" }}>
+        <PdfRow styles={{ paddingLeft: "23px", paddingRight: "80px" }}>
           Address:
           <PdfInput
             form={form}
@@ -243,7 +250,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
-        <PdfRow styles={{ paddingLeft: "23px" }}>
+        <PdfRow styles={{ paddingLeft: "23px", paddingRight: "80px" }}>
           E-mail:
           <PdfInput
             form={form}
@@ -259,7 +266,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
-        <PdfRow styles={{ paddingLeft: "10px" }}>
+        <PdfRow styles={{ paddingLeft: "10px", paddingRight: "80px" }}>
           (b) Additional deposit to be delivered to Escrow Agent within
           <PdfInput
             form={form}
@@ -267,11 +274,11 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             attribute="AdditionalDepositTime"
             paragraph={form.completed}
           />
-          (if left black, tehn 10)
+          (if left black, then 10)
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
           days after Effective
-          Date.........................................................................................$
+          Date......................................................................................................$
           <PdfInput
             form={form}
             handleInputForm={handleInputForm}
@@ -279,17 +286,13 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
-        <PdfFooter pageNumber={1} />
-      </PdfPage>
-
-      <PdfPage>
         <PdfRow styles={{ paddingLeft: "23px" }}>
           (All deposits paid or agreed to be paid, are collectively referred to
           as thw "Deposit")
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "10px" }}>
           (c) Financing: Express as a dollar amount or percentage ("Loan
-          Amount") see Paragraoh 8...
+          Amount") see Paragraoh 8 .........
           <PdfInput
             form={form}
             handleInputForm={handleInputForm}
@@ -299,7 +302,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "10px" }}>
           (d) Other:
-          ..........................................................................................................................
+          .................................................................................................................................
           $
           <PdfInput
             form={form}
@@ -314,7 +317,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
           transfer or other Collected funds (see STANDARD S)
-          ................................................... $
+          .......................................................... $
           <PdfInput
             form={form}
             handleInputForm={handleInputForm}
@@ -337,40 +340,39 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
           , this offer shall be deemed withdrawn and the Deposit, if any, shall
-          be
+          be returned to
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          returned to Buyer. Unless otherwise stated, time for acceptance of any
-          counter-offers shall be within
+          Buyer. Unless otherwise stated, time for acceptance of any
+          counter-offers shall be within 2 days after the day
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          2 days after the day the counter-offer is delivered.
+          the counter-offer is delivered.
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "10px" }}>
           (b) The effective date of this Contract shall be the date when the
-          last one of the Buyer and Seller has
+          last one of the Buyer and Seller has signed or
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "23px" }}>
-          signed or initialed and delivered this offer or final counter-offer
-          ("Effective Date").{" "}
+          initialed and delivered this offer or final counter-offer ("Effective
+          Date").{" "}
         </PdfRow>
         <PdfRow styles={{ fontWeight: "bold" }}>
           4. CLOSING; CLOSING DATE:
           <span style={{ fontWeight: "normal" }}>
             The closing of this transaction shall occur when all funds required
-            for closing
+            for closing are
           </span>
         </PdfRow>
         <PdfRow>
-          are received by Closing Agent and Collected pursuant to STANDARD S and
-          all closing documents required
+          received by Closing Agent and Collected pursuant to STANDARD S and all
+          closing documents required to be
         </PdfRow>
         <PdfRow>
-          to be furnished by each party pursuant to this Contract are delivered
-          ("Closing"). Unless modified by other
+          furnished by each party pursuant to this Contract are delivered
+          ("Closing"). Unless modified by other provisions of
         </PdfRow>
-        <PdfRow>provisions of</PdfRow>
-        <PdfFooter pageNumber={2} />
+        <PdfFooter pageNumber={1}></PdfFooter>
       </PdfPage>
     </PdfDocument>
   );
