@@ -92,8 +92,7 @@ export const ContractsInfo = [
       { key: "Property", position: 2 },
       { key: "Purchase Price", position: 3 },
       { key: "Effective Date", position: 4 },
-      { key: "Closing Date", position: 5 },
-      { key: "Preview", position: 6 },
+      { key: "Preview", position: 5 },
     ],
     questions: [
       {
@@ -143,34 +142,39 @@ export const ContractsInfo = [
         key: "PurchasePrice",
         question: "What is Purchase Price? (U.S. currency)",
         section: "Purchase Price",
+        number: true,
       },
       {
         key: "InitialDepositAmount",
         question:
           "What is the amount of the initial deposit that will be held in escrow?",
         section: "Purchase Price",
+        number: true,
       },
       {
-        key: "InitialDepositTime",
-        question:
-          "Will the initial deposit be made payable and delivered with the offer, or is it to be made after the effective date?",
+        key: "SelectOne",
+        question: "Select one of the following options:",
         section: "Purchase Price",
+        phrase: true,
       },
       {
         key: "DepositChoice(i)",
-        question: "Accompanies offer",
+        question: "The initial deposit accompanies the offer.",
         section: "Purchase Price",
+        radio: true,
       },
       {
         key: "DepositChoice(ii)",
-        question: "Is to be made within ... days after Effective Date",
+        question: "The initial deposit is to be made after the effective date.",
         section: "Purchase Price",
+        radio: true,
       },
       {
         key: "DaysChoice(ii)",
         question:
-          "How many days after the effective date do you intend to make the payment?",
+          "If you intend to pay after the effective date, how many days afterward do you plan to make the payment?",
         section: "Purchase Price",
+        number: true,
       },
       {
         key: "EscrowAgentName",
@@ -186,6 +190,7 @@ export const ContractsInfo = [
         key: "EscrowAgentPhone",
         question: "What is the Escrow Agent's Phone?",
         section: "Purchase Price",
+        number: true,
       },
       {
         key: "EscrowAgentEmail",
@@ -198,47 +203,43 @@ export const ContractsInfo = [
         section: "Purchase Price",
       },
       {
-        key: "AdditionalDepositAmount",
-        question:
-          "What is the amount of the additional deposit that will be delivered to Escrow Agent?",
-        section: "Purchase Price",
-      },
-      {
         key: "AdditionalDepositTime",
         question:
           "How many days after the effective date do you intend to make the payment?",
         section: "Purchase Price",
+        number: true,
+      },
+      {
+        key: "AdditionalDepositAmount",
+        question:
+          "What is the amount of the additional deposit that will be delivered to Escrow Agent?",
+        section: "Purchase Price",
+        number: true,
       },
       {
         key: "FinancingPercentage",
         question: "What is the percentage that will be financing?",
         section: "Purchase Price",
+        number: true,
       },
       {
         key: "Other",
         question: "Other?",
         section: "Purchase Price",
+        number: true,
       },
       {
         key: "BalanceToClose",
         question:
           "What is the remaining balance to be paid through wire transfer or other collected funds at the time of closing?",
         section: "Purchase Price",
+        number: true,
       },
       {
         key: "EffectiveDate",
         question: "When is the Effective date?",
         section: "Effective Date",
-      },
-      {
-        key: "BuyerInitials",
-        question: "What are the Buyer's initials?",
-        section: "Closing Date",
-      },
-      {
-        key: "SellerInitials",
-        question: "What are the Seller's initials?",
-        section: "Closing Date",
+        date: true,
       },
     ],
   },
