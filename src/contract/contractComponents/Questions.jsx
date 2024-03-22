@@ -13,7 +13,7 @@ export const Questions = ({
 
     const handleInputChange = (event) => {
       const inputValue =
-        question.checkbox && event.target.type === "checkbox"
+        question.radio && event.target.type === "radio"
           ? event.target.checked
           : event.target.value;
 
@@ -22,8 +22,8 @@ export const Questions = ({
         attribute: question.key,
       });
     };
-    const inputType = question.checkbox
-      ? "checkbox"
+    const inputType = question.radio
+      ? "radio"
       : question.date
       ? "date"
       : question.number
@@ -32,7 +32,7 @@ export const Questions = ({
 
     return (
       <div style={{ width: "440px" }} key={question.key}>
-        {question.checkbox ? (
+        {question.radio ? (
           <div style={{ paddingLeft: "10px" }}>
             <p>
               {" "}
