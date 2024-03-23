@@ -6,6 +6,8 @@ export const Questions = ({
   handleInputForm,
   form,
   AddContract,
+  progress,
+  handleProgress,
 }) => {
   const renderQuestion = (question) => {
     const getDefaultValue = () =>
@@ -98,7 +100,10 @@ export const Questions = ({
         {form.section > 1 && (
           <BtnStandart
             type="primary"
-            action={() => handleInputForm({ section: form.section - 1 })}
+            action={() => {
+              handleInputForm({ section: form.section - 1 });
+              handleProgress(form.section - 1);
+            }}
             children={<i className="bi bi-arrow-left-circle-fill"></i>}
             marginRight="10px"
           />
@@ -111,7 +116,10 @@ export const Questions = ({
         />
         <BtnStandart
           type="primary"
-          action={() => handleInputForm({ section: form.section + 1 })}
+          action={() => {
+            handleInputForm({ section: form.section + 1 });
+            handleProgress(form.section + 1);
+          }}
           children={<i className="bi bi-arrow-right-circle-fill"></i>}
           marginRight="10px"
         />

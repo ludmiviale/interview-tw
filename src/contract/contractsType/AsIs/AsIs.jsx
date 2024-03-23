@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { ContractsInfo } from "../ContractsInfo";
 import { Questions } from "../../contractComponents/Questions";
 import { PdfAsIs } from "./Pdf";
@@ -15,6 +16,21 @@ export const AsIs = ({
   AddContract,
 }) => {
   const information = ContractsInfo.find((e) => e.key === form.key);
+
+  const numberOfSections = information?.sections?.length;
+  const unitPercentage = 100 / numberOfSections;
+
+  const [progress, setProgress] = useState(
+    form?.section
+      ? (form.section - 1) * unitPercentage + unitPercentage
+      : unitPercentage
+  );
+
+  const handleProgress = (section) => {
+    const targetProgress = (section - 1) * unitPercentage + unitPercentage;
+    setProgress(targetProgress);
+    handleInputForm({ section });
+  };
 
   const handleGeneratePdf = () => {
     const doc = new jsPDF({
@@ -75,6 +91,7 @@ export const AsIs = ({
           <PdfAsIs
             handleInputForm={handleInputForm}
             form={form}
+            setForm={setForm}
             flyerRef={flyerRef}
           />
         </div>
@@ -84,6 +101,8 @@ export const AsIs = ({
             information={information}
             handleInputForm={handleInputForm}
             form={form}
+            progress={progress}
+            handleProgress={handleProgress}
           />
           {form.section < information?.sections?.length ? (
             <Questions
@@ -91,6 +110,8 @@ export const AsIs = ({
               handleInputForm={handleInputForm}
               form={form}
               AddContract={AddContract}
+              progress={progress}
+              handleProgress={handleProgress}
             />
           ) : (
             <>
@@ -104,7 +125,11 @@ export const AsIs = ({
                 marginRight="10px"
               />
 
-              <PdfAsIs handleInputForm={handleInputForm} form={form} />
+              <PdfAsIs
+                handleInputForm={handleInputForm}
+                setForm={setForm}
+                form={form}
+              />
             </>
           )}
         </>
