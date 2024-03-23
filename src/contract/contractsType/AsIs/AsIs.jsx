@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import jsPDF from "jspdf";
 import { ContractsInfo } from "../ContractsInfo";
 import { Questions } from "../../contractComponents/Questions";
 import { PdfAsIs } from "./Pdf";
-import jsPDF from "jspdf";
 import { Sections } from "../../contractComponents/Sections";
 import BtnStandart from "../../../components/BtnStandart";
 import DocumentActions from "../../../components/DocumentActions";

@@ -1,8 +1,9 @@
 import React from "react";
+import { useState } from "react";
+import jsPDF from "jspdf";
 import { ContractsInfo } from "../ContractsInfo";
 import { Questions } from "../../contractComponents/Questions";
 import { PdfAddendumToContract } from "./Pdf";
-import jsPDF from "jspdf";
 import { Sections } from "../../contractComponents/Sections";
 import BtnStandart from "../../../components/BtnStandart";
 import DocumentActions from "../../../components/DocumentActions";
@@ -15,6 +16,21 @@ export const AddendumToContract = ({
   AddContract,
 }) => {
   const information = ContractsInfo.find((e) => e.key === form.key);
+
+  const numberOfSections = information?.sections?.length;
+  const unitPercentage = 100 / numberOfSections;
+
+  const [progress, setProgress] = useState(
+    form?.section
+      ? (form.section - 1) * unitPercentage + unitPercentage
+      : unitPercentage
+  );
+
+  const handleProgress = (section) => {
+    const targetProgress = (section - 1) * unitPercentage + unitPercentage;
+    setProgress(targetProgress);
+    handleInputForm({ section });
+  };
 
   const handleGeneratePdf = () => {
     const doc = new jsPDF({
@@ -90,6 +106,8 @@ export const AddendumToContract = ({
             information={information}
             handleInputForm={handleInputForm}
             form={form}
+            progress={progress}
+            handleProgress={handleProgress}
           />
           {form.section < information?.sections?.length ? (
             <Questions
@@ -97,6 +115,8 @@ export const AddendumToContract = ({
               handleInputForm={handleInputForm}
               form={form}
               AddContract={AddContract}
+              progress={progress}
+              handleProgress={handleProgress}
             />
           ) : (
             <>
