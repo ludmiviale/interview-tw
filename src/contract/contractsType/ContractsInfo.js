@@ -152,7 +152,7 @@ export const ContractsInfo = [
         number: true,
       },
       {
-        key: "SelectOne",
+        key: "DepositChoice",
         question: "Select one of the following options:",
         section: "Purchase Price",
         phrase: true,
