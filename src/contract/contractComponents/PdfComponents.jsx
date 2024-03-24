@@ -35,14 +35,16 @@ export const PdfHeader = ({ children, styles }) => {
   );
 };
 
-export const PdfFooter = ({ pageNumber }) => {
+export const PdfFooter = ({ pageNumber, totalPages }) => {
   return (
     <footer className="footerPDF">
       <div className="firstLine">
         <div className="initials">
           <span>Buyer's Initials _______ _______</span>
         </div>
-        <span>Page {pageNumber} of 13</span>
+        <span>
+          Page {pageNumber} of {totalPages}
+        </span>
         <div className="initials">
           <span>Seller's Initials _______ _______</span>
         </div>
@@ -102,7 +104,7 @@ export const PdfRadio = ({ form, handleInputForm, attribute }) => {
         });
       }}
       type="radio"
-      name="SelectOne"
+      name="DepositChoice"
       className="inputContract"
     />
   );
@@ -122,7 +124,6 @@ export const PdfTextArea = ({
           className="pContract"
           style={{
             minHeight: height,
-            marginBottom: "10px",
           }}
         >
           {form?.value?.find((field) => field.key === attribute)?.value}
@@ -140,7 +141,6 @@ export const PdfTextArea = ({
           style={{
             minHeight: height,
             textAlign: "start",
-            marginBottom: "10px",
           }}
         />
       )}
