@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   PdfDocument,
   PdfHeader,
@@ -7,9 +7,10 @@ import {
   PdfInput,
   PdfRadio,
   PdfFooter,
+  PdfTextArea,
 } from "../../contractComponents/PdfComponents";
 
-export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
+export const PdfAsIs = ({ handleInputForm, form, setForm, flyerRef }) => {
   return (
     <PdfDocument flyerRef={flyerRef}>
       <PdfPage>
@@ -51,11 +52,9 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
           AS IS Residential Contract For Sale And Purchase
         </PdfRow>
         <PdfRow> and any riders and addenda ("Contract"):</PdfRow>
-
         <PdfRow styles={{ fontWeight: "bold" }}>
           1. PROPERTY DESCRIPTION:
         </PdfRow>
-
         <PdfRow styles={{ paddingLeft: "10px" }}>
           (a) Street address, city, zip:
           <PdfInput
@@ -65,7 +64,6 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
-
         <PdfRow styles={{ paddingLeft: "10px" }}>
           (b) Located in:
           <PdfInput
@@ -82,17 +80,18 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
-
         <PdfRow styles={{ paddingLeft: "10px" }}>
           (c) Real Property: The legal description is
-          <PdfInput
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          <PdfTextArea
             form={form}
             handleInputForm={handleInputForm}
             attribute="RealProperty"
+            height={"25px"}
             paragraph={form.completed}
           />
         </PdfRow>
-
         <PdfRow styles={{ paddingLeft: "23px" }}>
           together with all existing improvements and fixtures, including
           built-in appliances, built-in furnishings and
@@ -131,10 +130,13 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
 
         <PdfRow styles={{ paddingLeft: "23px" }}>
           Other Personal Property items included in this purchase are:
-          <PdfInput
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          <PdfTextArea
             form={form}
             handleInputForm={handleInputForm}
             attribute="PropertyItemsIncluded"
+            height={"12px"}
             paragraph={form.completed}
           />
         </PdfRow>
@@ -144,10 +146,13 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
         </PdfRow>
         <PdfRow styles={{ paddingLeft: "10px" }}>
           (e) The following items are excluded from the purchase:
-          <PdfInput
+        </PdfRow>
+        <PdfRow styles={{ paddingLeft: "23px" }}>
+          <PdfTextArea
             form={form}
             handleInputForm={handleInputForm}
             attribute="PropertyItemsExcluded"
+            height={"12px"}
             paragraph={form.completed}
           />
         </PdfRow>
@@ -372,7 +377,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
           furnished by each party pursuant to this Contract are delivered
           ("Closing"). Unless modified by other provisions of
         </PdfRow>
-        <PdfFooter pageNumber={1}></PdfFooter>
+        <PdfFooter pageNumber={1} totalPages={13}></PdfFooter>
       </PdfPage>
     </PdfDocument>
   );
