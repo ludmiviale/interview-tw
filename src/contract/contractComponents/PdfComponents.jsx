@@ -69,6 +69,7 @@ export const PdfInput = ({
   attribute,
   type,
   paragraph,
+  styles,
 }) => {
   return (
     <>
@@ -87,6 +88,7 @@ export const PdfInput = ({
           }}
           type={type}
           className="inputContract"
+          style={styles}
         />
       )}
     </>
