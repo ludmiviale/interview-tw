@@ -35,34 +35,6 @@ export const PdfHeader = ({ children, styles }) => {
   );
 };
 
-export const PdfFooter = ({ pageNumber, totalPages }) => {
-  return (
-    <footer className="footerPDF">
-      <div className="firstLine">
-        <div className="initials">
-          <span>Buyer's Initials _______ _______</span>
-        </div>
-        <span>
-          Page {pageNumber} of {totalPages}
-        </span>
-        <div className="initials">
-          <span>Seller's Initials _______ _______</span>
-        </div>
-      </div>
-      <div className="secondLine">
-        <span>FloridaRealtors/FloridaBar-ASIS-6x </span>
-        <span> Rev.7/23 © 2023 Florida Realtorsº and The Florida Bar. </span>
-        <span>All rights reserved.</span>
-      </div>
-      <div className="thirdLine">
-        <hr />
-        <span>Serial#:</span>
-        <span style={{ fontWeight: "bold" }}> 083254-700170-6307170</span>
-      </div>
-    </footer>
-  );
-};
-
 export const PdfInput = ({
   form,
   handleInputForm,
@@ -147,5 +119,33 @@ export const PdfTextArea = ({
         />
       )}
     </>
+  );
+};
+
+export const PdfFooter = ({ pageNumber, totalPages }) => {
+  return (
+    <footer className="footerPDF">
+      <div className="firstLine">
+        <div className="initials">
+          <span>Buyer's Initials _______ _______</span>
+        </div>
+        <span>
+          Page {pageNumber} of {totalPages}
+        </span>
+        <div className="initials">
+          <span>Seller's Initials _______ _______</span>
+        </div>
+      </div>
+      <div className="secondLine">
+        <span>FloridaRealtors/FloridaBar-ASIS-6x </span>
+        <span> Rev.7/23 © 2023 Florida Realtorsº and The Florida Bar. </span>
+        <span>All rights reserved.</span>
+      </div>
+      <div className="thirdLine">
+        <hr />
+        <span>Serial#:</span>
+        <span style={{ fontWeight: "bold" }}> 083254-700170-6307170</span>
+      </div>
+    </footer>
   );
 };
