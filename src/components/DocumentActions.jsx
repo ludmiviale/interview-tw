@@ -1,12 +1,9 @@
 import BtnStandart from "./BtnStandart";
-import { PdfAsIs } from "../contract/contractsType/AsIs/Pdf";
 
 const DocumentActions = ({
   form,
   setForm,
-  flyerRef,
   handleGeneratePdf,
-  handleInputForm,
   handlePrintPdf,
 }) => {
   return (
