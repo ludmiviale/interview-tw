@@ -203,6 +203,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="PurchasePrice"
             paragraph={form.completed}
+            type="number"
           />
         </PdfRow>
         <PdfRow>
@@ -218,6 +219,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="InitialDepositAmount"
             paragraph={form.completed}
+            type="number"
           />
         </PdfRow>
         <PdfRow>
@@ -225,7 +227,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
           The initial deposit made payable and delivered to "Escrow Agent" named
           below
         </PdfRow>
-        <PdfRow styles={{ paddingRight: "95px" }}>
+        <PdfRow styles={{ paddingRight: "70px" }}>
           <span style={{ fontSize: "5px", paddingRight: "18px" }}>30*</span>
           <span style={{ fontWeight: "bold" }}>(CHECK ONE):</span>
           <span>(i)</span>
@@ -248,6 +250,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="DaysChoice(ii)"
             paragraph={form.completed}
+            type="number"
           />
           {"("}if left
         </PdfRow>
@@ -285,6 +288,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="EscrowAgentPhone"
             paragraph={form.completed}
+            type="number"
           />
         </PdfRow>
         <PdfRow styles={{ paddingRight: "60px" }}>
@@ -312,6 +316,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="AdditionalDepositTime"
             paragraph={form.completed}
+            type="number"
           />
           (if left black, then 10)
         </PdfRow>
@@ -324,6 +329,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="AdditionalDepositAmount"
             paragraph={form.completed}
+            type="number"
           />
         </PdfRow>
         <PdfRow>
@@ -340,7 +346,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="FinancingPercentage"
             paragraph={form.completed}
-          />{" "}
+          />
         </PdfRow>
         <PdfRow>
           <span style={{ fontSize: "5px", paddingRight: "10px" }}>40*</span>
@@ -352,6 +358,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="Other"
             paragraph={form.completed}
+            type="number"
           />
         </PdfRow>
         <PdfRow>
@@ -368,6 +375,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="BalanceToClose"
             paragraph={form.completed}
+            type="number"
           />
         </PdfRow>
         <PdfRow>
@@ -389,6 +397,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="EffectiveDate"
             paragraph={form.completed}
+            type="date"
           />
           , this offer shall be deemed withdrawn and the Deposit, if any, shall
           be returned to

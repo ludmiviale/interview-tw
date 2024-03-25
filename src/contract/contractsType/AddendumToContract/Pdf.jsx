@@ -23,6 +23,7 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="AddendumNumber"
             paragraph={form.completed}
+            type="number"
           />
           to the Contract with the Effective Date of
           <PdfInput
@@ -31,6 +32,7 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="EffectiveDate"
             paragraph={form.completed}
+            type="date"
           />
           between
         </PdfRow>
@@ -95,8 +97,8 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
             form={form}
             handleInputForm={handleInputForm}
             attribute="BuyerDate1"
-            type={"date"}
             paragraph={form.completed}
+            type="date"
           />
         </PdfRow>
         <PdfRow styles={{ marginBottom: "10px", fontSize: "8px" }}>
@@ -114,8 +116,8 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
             form={form}
             handleInputForm={handleInputForm}
             attribute="BuyerDate2"
-            type={"date"}
             paragraph={form.completed}
+            type="date"
           />
         </PdfRow>
         <PdfRow styles={{ marginBottom: "10px", fontSize: "8px" }}>
@@ -133,8 +135,8 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
             form={form}
             handleInputForm={handleInputForm}
             attribute="SellerDate1"
-            type={"date"}
             paragraph={form.completed}
+            type="date"
           />
         </PdfRow>
         <PdfRow styles={{ marginBottom: "10px", fontSize: "8px" }}>
@@ -152,8 +154,8 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
             form={form}
             handleInputForm={handleInputForm}
             attribute="SellerDate2"
-            type={"date"}
             paragraph={form.completed}
+            type="date"
           />
         </PdfRow>
       </PdfPage>

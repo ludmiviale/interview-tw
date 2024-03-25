@@ -14,11 +14,13 @@ export const ContractsInfo = [
         key: "AddendumNumber",
         question: "What is the addendum N°?",
         section: "Addendum N°",
+        number: true,
       },
       {
         key: "EffectiveDate",
         question: "When is the Effective date?",
         section: "Addendum N°",
+        date: true,
       },
       {
         key: "Seller",
@@ -50,6 +52,7 @@ export const ContractsInfo = [
         key: "BuyerDate1",
         question: "What is the buyer birth date?",
         section: "More Parties",
+        date: true,
       },
       {
         key: "BuyerInfo2",
@@ -61,6 +64,7 @@ export const ContractsInfo = [
         key: "BuyerDate2",
         question: "What is the co-buyer birth date?",
         section: "More Parties",
+        date: true,
       },
       {
         key: "SellerName1",
@@ -71,6 +75,7 @@ export const ContractsInfo = [
         key: "SellerDate1",
         question: "What is the buyer birth date?",
         section: "More Parties",
+        date: true,
       },
       {
         key: "SellerInfo2",
@@ -82,6 +87,7 @@ export const ContractsInfo = [
         key: "SellerDate2",
         question: "What is the co-seller birth date?",
         section: "More Parties",
+        date: true,
       },
     ],
   },
