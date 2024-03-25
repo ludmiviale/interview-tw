@@ -43,7 +43,7 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   font-size: 9px;
   padding: 30px;
-  line-height: 1.6
+  line-height: 1.4
 }
 
 .headerPDF {
@@ -53,17 +53,13 @@
 }
 
 .headerPDF h2 {
-  margin: 0px;
+  margin: 10px 0px 0px;
 }
 
 .headerPDF p {
   font-size: 6px;
   font-weight: bold;
   margin-top: 0;
-}
-
-.sequentialNumbering {
-  font-weight: bold;
 }
 
 .titleContract {
@@ -75,7 +71,6 @@
 .inputContract {
   width: 100%;
   max-height: 10px;
-  padding: 4px;
   border: none;
   text-align: center;
   border-bottom: 1px solid black;
@@ -94,11 +89,13 @@
 }
 
 .pContract {
-  margin: 0px 2px;
-  padding: 4px;
   width: 100%;
-  text-align: center;
+  margin: 0px 2px;
   border-bottom: 1px solid black;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+  font-size: 6.4px;
 }
 
 .textAreaContract {
@@ -122,7 +119,7 @@
 }
 
 .footerPDF {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .firstLine {
