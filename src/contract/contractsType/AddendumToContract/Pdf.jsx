@@ -11,13 +11,14 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
   return (
     <PdfDocument flyerRef={flyerRef}>
       <PdfPage>
-        <PdfHeader>
+        <PdfHeader styles={{ marginBottom: "20px", marginTop: "-20px" }}>
           <h2 className="titleContract">Addendum to contract</h2>
         </PdfHeader>
 
-        <PdfRow>
+        <PdfRow styles={{ fontSize: "8px" }}>
           Addendum No.
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="AddendumNumber"
@@ -25,6 +26,7 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
           />
           to the Contract with the Effective Date of
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="EffectiveDate"
@@ -32,8 +34,9 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
           />
           between
         </PdfRow>
-        <PdfRow>
+        <PdfRow styles={{ fontSize: "8px" }}>
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="Seller"
@@ -41,9 +44,10 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
           />
           (Seller)
         </PdfRow>
-        <PdfRow>
+        <PdfRow styles={{ fontSize: "8px" }}>
           and
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="Buyer"
@@ -51,16 +55,17 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
           />
           (Buyer)
         </PdfRow>
-        <PdfRow>
+        <PdfRow styles={{ fontSize: "8px" }}>
           concerning the property described as:
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="PropertyAddress"
             paragraph={form.completed}
           />
         </PdfRow>
-        <PdfRow>
+        <PdfRow styles={{ fontSize: "8px" }}>
           (the "Contract"). Seller and Buyer make the following terms and
           conditions part of the contract
         </PdfRow>
@@ -73,9 +78,12 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
-        <PdfRow styles={{ marginBottom: "10px" }}>
+        <PdfRow
+          styles={{ marginBottom: "10px", marginTop: "10px", fontSize: "8px" }}
+        >
           Buyer:
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="BuyerName1"
@@ -83,6 +91,7 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
           />
           Date:
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="BuyerDate1"
@@ -90,9 +99,10 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
-        <PdfRow styles={{ marginBottom: "10px" }}>
+        <PdfRow styles={{ marginBottom: "10px", fontSize: "8px" }}>
           Buyer:
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="BuyerName2"
@@ -100,6 +110,7 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
           />
           Date:
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="BuyerDate2"
@@ -107,9 +118,10 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
-        <PdfRow styles={{ marginBottom: "10px" }}>
+        <PdfRow styles={{ marginBottom: "10px", fontSize: "8px" }}>
           Seller:
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="SellerName1"
@@ -117,6 +129,7 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
           />
           Date:
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="SellerDate1"
@@ -124,9 +137,10 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
             paragraph={form.completed}
           />
         </PdfRow>
-        <PdfRow>
+        <PdfRow styles={{ marginBottom: "10px", fontSize: "8px" }}>
           Seller:
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="SellerName2"
@@ -134,6 +148,7 @@ export const PdfAddendumToContract = ({ handleInputForm, form, flyerRef }) => {
           />
           Date:
           <PdfInput
+            styles={{ padding: "8px" }}
             form={form}
             handleInputForm={handleInputForm}
             attribute="SellerDate2"
