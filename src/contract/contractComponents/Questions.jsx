@@ -6,7 +6,6 @@ export const Questions = ({
   handleInputForm,
   form,
   AddContract,
-  progress,
   handleProgress,
 }) => {
   const renderQuestion = (question) => {
