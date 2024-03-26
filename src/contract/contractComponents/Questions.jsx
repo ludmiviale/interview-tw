@@ -40,7 +40,7 @@ export const Questions = ({
               <input
                 style={{ marginRight: "10px" }}
                 type={inputType}
-                name="DepositChoice"
+                name={question.section}
                 defaultValue={getDefaultValue}
                 onChange={handleInputChange}
               />

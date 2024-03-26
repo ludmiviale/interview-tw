@@ -67,7 +67,7 @@ export const PdfInput = ({
   );
 };
 
-export const PdfRadio = ({ form, handleInputForm, attribute }) => {
+export const PdfRadio = ({ form, handleInputForm, attribute, name }) => {
   return (
     <input
       checked={form?.value?.find((field) => field.key === attribute)?.value}
@@ -78,7 +78,7 @@ export const PdfRadio = ({ form, handleInputForm, attribute }) => {
         });
       }}
       type="radio"
-      name="DepositChoice"
+      name={name}
       className="inputContract"
     />
   );

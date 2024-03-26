@@ -236,6 +236,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="DepositChoice(i)"
             paragraph={form.completed}
+            name="DepositChoice"
           />
           accompanies offer or (ii)
           <PdfRadio
@@ -243,6 +244,7 @@ export const PdfAsIs = ({ handleInputForm, form, flyerRef }) => {
             handleInputForm={handleInputForm}
             attribute="DepositChoice(ii)"
             paragraph={form.completed}
+            name="DepositChoice"
           />
           is to be made within
           <PdfInput
